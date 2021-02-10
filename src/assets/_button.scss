@@ -1,0 +1,33 @@
+@import './mixins.scss';
+
+.button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 38px;
+  width: 295px;
+  @include font($bold: true);
+  color: $color-white;
+  font-size: $font-14;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media screen and (min-width: 992px) {
+    width: 256px;
+  }
+}
+
+.blue {
+  background-color: $color-blue-1;
+
+  &:hover {
+    background-color: $color-blue-2;
+  }
+}
+
+.gray {
+  background-color: $color-gray-4;
+  cursor: auto;
+}

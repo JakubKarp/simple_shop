@@ -1,0 +1,16 @@
+@mixin font($bold: false) {
+  font-family: 'Nunito', sans-serif;
+  color: $color-gray-5;
+
+  @if $bold {
+    font-weight: 600;
+  } @else {
+    font-weight: 400;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

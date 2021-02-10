@@ -1,0 +1,52 @@
+@import '../../../assets/main.scss';
+
+.pagination {
+  &__container {
+    @include flex;
+    flex-direction: column;
+    margin: 24px 0;
+    @include font($bold: true);
+  }
+
+  &__info {
+    margin-bottom: 16px;
+    font-size: $font-14;
+    color: $color-gray-4;
+  }
+
+  &__group {
+    font-size: $font-14;
+    color: $color-gray-5;
+    @include flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+
+  &__buttons {
+    @include flex;
+    flex-direction: row;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+
+    @media screen and (min-width: 992px) {
+      padding: 0 8px;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+    &__active {
+      color: $color-blue-1;
+    }
+  }
+}

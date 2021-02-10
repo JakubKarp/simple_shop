@@ -1,0 +1,100 @@
+@import '../../assets/main.scss';
+
+.login {
+  &__container {
+    @include flex;
+    height: 100vh;
+    background-color: $color-white;
+
+    a {
+      text-decoration: none;
+    }
+
+    h1 {
+      font-size: $font-24;
+      color: $color-gray-5;
+      margin-top: 48px;
+    }
+  }
+
+  &__image {
+    display: none;
+    width: 40vw;
+    height: 100%;
+    background-image: url('../../assets//images/login-img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    @include font($bold: true);
+    font-size: $font-18;
+    color: $color-gray-5;
+
+    @media screen and (min-width: 992px) {
+      width: 60vw;
+      padding-left: 8vw;
+    }
+  }
+
+  &__form {
+    margin-top: 16vh;
+
+    button {
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    h2 {
+      font-size: $font-30;
+      color: $color-gray-5;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__group {
+    @include flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    font-size: $font-14;
+  }
+
+  &__input {
+    width: 80vw;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid $color-gray-2;
+    padding-left: 16px;
+    @include font($bold: true);
+    font-size: $font-14;
+    margin: 8px 0;
+
+    @media screen and (min-width: 992px) {
+      width: 36vw;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__recover {
+    @include font($bold: false);
+    font-size: $font-14;
+    color: $color-gray-4;
+  }
+}

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
+@import '~normalize.css';
+@import './variables.scss';
+@import './button.scss';
+@import './mixins.scss';
+
+body {
+  background-color: $color-background;
+}
+
+.page__container {
+  @include flex;
+  flex-direction: column;
+  padding: 40px 0 180px;
+}
+
+.card__container {
+  @include flex;
+  max-width: 1400px;
+  flex-wrap: wrap;
+}
+
+.loader {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 4px solid $color-gray-2;
+  border-left: 4px solid $color-blue-1;
+  animation: round 2s infinite linear;
+}
+
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

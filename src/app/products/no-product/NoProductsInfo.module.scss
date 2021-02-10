@@ -1,0 +1,30 @@
+@import '../../../assets/main.scss';
+
+.noProduct {
+  background-color: $color-white;
+  width: 327px;
+  height: 344px;
+  @include flex;
+
+  @media screen and (min-width: 992px) {
+    width: 600px;
+    height: 344px;
+  }
+
+  &__container {
+    @include flex;
+    flex-direction: column;
+    @include font($bold: true);
+  }
+
+  &__info {
+    font-size: $font-18;
+    color: $color-gray-5;
+  }
+
+  &__text {
+    font-size: $font-14;
+    color: $color-gray-4;
+    margin-top: 8px;
+  }
+}
